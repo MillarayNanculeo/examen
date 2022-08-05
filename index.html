@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Datos Ajedrez</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <style>
+            body, html {width: 100%; height: 100%;}
+            @media (min-width:767.98px) {
+                .container { max-width: 720px; }
+            }
+            body {
+              font-family: 'Inter', sans-serif;
+              font-weight: 400;
+            }
+            h1, h2, h3, h4, h5, h6 {
+              font-family: 'Roboto Slab', serif;
+              font-weight: 800;
+            }
+
+            header {position: relative; display: table; width: 100%; min-height: 90vh;}
+            hr {width: 10vw; margin: 5rem auto 3rem auto; border: 3px solid gray;}
+        </style>
+    </head>
+    <body>
+        <header class="d-flex align-items-end">
+            <div class="container">
+                <h1>Ajedrez: estrategia y supervivencia</h1>
+                <p class="lead mt-3 mb-5">El ajedrez es uno de los juegos de estrategias más antiguos del mundo. El juego como se conoce hoy en día surge en Europa durante el
+                  siglo XV que a su vez provenía de un juego que se practicaba en la india desde el siglo VI.</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <hr />
+            <h2 class="my-2 text-center">Las blancas ganan</h2>
+            <p>En la mayoría de los torneos las piezas blancas son las que ganan. Se cree que al hacer el primer movimiento son quienes tienen la ventaja</p>
+            <figure class="bg-white mt-2 mb-5 g-0 shadow-sm">
+                <canvas id="primero" width="300" height="100"></canvas>
+                <figcaption class="px-5 py-3 small text-center text-muted">Chessgames.com\ndatabase 2015</figcaption>
+            </figure>
+            <hr />
+            <h2 class="my-2 text-center">Porcentaje de sobrevivencia de las piezas</h2>
+            <p>En el caso de las piezas de ajedrez no cambia mucho el asunto donde sabemos que de las blancas sobreviven en promedio un 53.875% de las veces, mientras que los peones de las negras sobreviven un 52.275% de las veces.
+              También podemos ver las diferencias de supervivencia de las reinas:
+. </p>
+            <figure class="bg-white mt-2 mb-5 g-0 shadow-sm">
+                <canvas id="segundo" width="300" height="100"></canvas>
+                <figcaption class="px-5 py-3 small text-center text-muted">Indicar fuente de los datos</figcaption>
+            </figure>
+        </main>
+
+        <aside class="container">
+            <hr />
+            <h2 class="my-3 text-center">¿A quiénes les podría interesar?</h2>
+            <!--PROTO-PERSONA 1-->
+            <div class="row align-items-center bg-white mb-4 g-0 shadow-sm">
+                <div class="col-sm-4">
+                    <img src="img/proto-persona-1.jpg" class="w-100" />
+                </div>
+                <div class="col-sm-8 p-4">
+                    <h3 class="fs-5">Alberto (61)</h3>
+                    <p>Hombre mayor que lleva años jugando ajedrez. Va todos los viernes a plaza de armas de Santiago a jugar ajedrez aprovechando que vive cerca. </p>
+                    <p>Usa tablet y celular, pero no redes sociales, es una persona que sigue usando internet como búsqueda de información pero no para compartir su vida.</p>
+                </div>
+            </div>
+            <!--PROTO-PERSONA 2-->
+            <div class="row align-items-center bg-white mb-4 g-0 shadow-sm">
+                <div class="col-sm-4 order-sm-2">
+                    <img src="img/proto-persona-2.jpg" class="w-100" />
+                </div>
+                <div class="col-sm-8 order-sm-1 p-4">
+                    <h3 class="fs-5">Diego (16)</h3>
+                    <p>Adolescente que ve muchas series. Se interesó por el ajedres porque vio Gambito de Dama y le gustó el juego.</p>
+                    <p>Usa internet para buscar información y tutoriales en youtube para aprender distintas cosas, entre ellas
+                      el ajedrez. Para esto tiene celular y notebook en los que también usa redes sociales para compartir y encontrar foros.</p>
+                </div>
+            </div>
+            <!--PROTO-PERSONA 3-->
+            <div class="row align-items-center bg-white mb-5 g-0 shadow-sm">
+                <div class="col-sm-4">
+                    <img src="img/proto-persona-3.jpg" class="w-100" />
+                </div>
+                <div class="col-sm-8 p-4">
+                    <h3 class="fs-5">Jasmín (23)</h3>
+                    <p>Estudiante universitaria que juega ajedrez desde niña como aficionada, participa en un club de ajedrez y continuamente busca curiosidades de este juego.</p>
+                    <p>Usa internet para comunicarse con sus amigos y buscar información sobre jugadas de torneos. También juega en Cheess.com para comparar sus estadísticas con personas
+                      de otros países.</p>
+                </div>
+            </div>
+        </aside>
+
+        <footer>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col-12">
+                        <p class="d-flex justify-content-between small p-1 m-0">
+                            <a href="https://github.com/profesorfaco/front-end" class="link-secondary">Introducción al Desarrollo Front End con HTML, CSS y JavaScript</a>
+                            <!--reemplaza el # que sigue con vínculo a tu propio GitHub-->
+                            <a href="https://github.com/MillarayNanculeo" class="d-none d-lg-inline link-secondary">Javiera Silva Ñanculeo © 2022</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--La biblioteca de p5.js-->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+            integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!--El script de p5.js-->
+        <script>
+            var canvas;
+            function setup() {
+                canvas = createCanvas(windowWidth, windowHeight);
+                canvas.position(0, 0);
+                canvas.style("z-index", "-1").style("position", "fixed");
+                noCursor();
+            }
+            function draw() {
+                background(250);
+                textSize(50);
+                textAlign(CENTER, CENTER);
+                text("♟️", mouseX, mouseY);
+            }
+            function windowResize() {
+                resizeCanvas(windowWidth, windowHeight);
+            }
+        </script>
+        <!--La biblioteca de Chart.js-->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+            integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!--El script del primer gráfico-->
+        <script>
+async function todo() {
+  //fetch
+
+                const consulta = await fetch("https://raw.githubusercontent.com/MillarayNanculeo/chessjsons/main/csvjson.json");
+                const data = await consulta.json();
+
+  //variables
+              var porcentaje_negras = 0;
+              var porcentaje_blancas = 0;
+
+              data.forEach((d) => {
+                if (d.colour.includes ("black") && d.surv_rate < 50) {
+                  porcentaje_negras = porcentaje_negras + 1;
+                } else if (d.colour.includes ("white") && d.surv_rate < 50) {
+                  porcentaje_blancas = porcentaje_blancas + 1;
+                }
+
+             });
+
+              console.log (porcentaje_negras);
+                console.log (porcentaje_blancas);
+
+            new Chart(document.getElementById("primero").getContext("2d"), {
+                type: "bar",
+                data: {
+                    labels: ["negras", "blancas"],
+                    datasets: [
+                        {
+                            data: [24.60, 37.50],
+                            label: "porcentaje de partidas ganadas",
+                        },
+                    ],
+                },
+                options: {
+                    animation: false,
+                    indexAxis: "y",
+                    layout: {
+                        padding: 20,
+                    },
+                },
+            });
+          }
+            todo().catch((error) => console.error(error));
+        </script>
+        <!--El script del segundo gráfico-->
+        <script>
+            new Chart(document.getElementById("segundo").getContext("2d"), {
+                type: "bar",
+                data: {
+                    labels: ["Reina negra", "Reina Blanca"],
+                    datasets: [
+                        {
+                            data: [45.6, 49.2],
+                            label: "Porcentaje de supervivencia",
+                        },
+                    ],
+                },
+                options: {
+                    animation: false,
+                    indexAxis: "y",
+                    layout: {
+                        padding: 20,
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
